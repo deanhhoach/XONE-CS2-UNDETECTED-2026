@@ -1,0 +1,32 @@
+name: Auto Update Logs
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Simulate logs update
+        run: |
+          echo "Update: $(date)" >> workflow/logs/auto.log
+
+      - name: Commit changes
+        run: |
+          git add workflow/logs
+          git commit -m "Auto update logs $(date)" || echo "No changes"
+
+      - name: Push changes
+        run: |
+          git push
