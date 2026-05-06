@@ -1,0 +1,28 @@
+name: Auto Update Repo
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"  # 
+  workflow_dispatch:        # 
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Make update
+        run: |
+          echo "Last update: $(date)" >> logs/update.log
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Auto update $(date)" || echo "No changes"
+
+      - name: Push changes
+        run: git push
